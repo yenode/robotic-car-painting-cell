@@ -47,7 +47,7 @@ The completed run is recorded in [`results/execution.json`](results/execution.js
 .
 ├── src/painting_cell/             # Simulation, planning, tool, world, and RViz package
 ├── src/ur_description/            # Minimal upstream UR20 description and licenses
-├── scripts/                       # Environment, asset preparation, and figure generator
+├── scripts/                       # Environment setup scripts (env.sh, env.zsh)
 ├── results/execution.json         # Machine-readable successful execution evidence
 ├── media/screenshots/             # Report and submission figures
 ├── Technical_Report.pdf           # Generated technical report PDF

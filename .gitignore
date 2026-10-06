@@ -11,3 +11,6 @@ docs/
 Robotics_Simulation_Intern_Assessment.pdf
 results/runtime/
 results/validation.json
+scripts/prepare_car.py
+scripts/generate_figures.py
+scripts/package_submission.py
