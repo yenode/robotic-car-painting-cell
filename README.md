@@ -1,6 +1,6 @@
-# Robotic Car Painting Cell — ROS 2 + Gazebo
+# Robotic Car Painting Cell : ROS 2 + Gazebo
 
-Robotic painting-cell simulation completed for the Yuktii AI Labs Robotics Simulation Intern assessment.
+Robotic car painting cell simulation using ROS 2, MoveIt 2, and Gazebo Harmonic.
 
 | Item | Selection |
 | --- | --- |
@@ -37,7 +37,7 @@ The completed run is recorded in [`results/execution.json`](results/execution.js
 | Sampled states checked for collisions | 1,197 |
 | Deliberate collision test | Passed; car ↔ spray nozzle detected |
 | Deliberate collision executed | No |
-| Target TCP standoff | 0.250 m; dense nearest-mesh check 0.246–0.250 m |
+| Target TCP standoff | 0.250 m; dense nearest-mesh check 0.246 to 0.250 m |
 | Simulated sequence duration | 117.18 s |
 | Maximum final joint error | 0.00139 rad |
 
@@ -47,12 +47,10 @@ The completed run is recorded in [`results/execution.json`](results/execution.js
 .
 ├── src/painting_cell/             # Simulation, planning, tool, world, and RViz package
 ├── src/ur_description/            # Minimal upstream UR20 description and licenses
-├── scripts/                       # Environment, asset preparation, tests, and figures
+├── scripts/                       # Environment, asset preparation, and figure generator
 ├── results/execution.json         # Machine-readable successful execution evidence
 ├── media/screenshots/             # Report and submission figures
-├── docs/Technical_Report.md       # Editable report source
-├── Technical_Report.pdf           # Generated 3–5 page report
-├── submission/                     # Lean ready-to-upload bundle and ZIP
+├── Technical_Report.pdf           # Generated technical report PDF
 └── THIRD_PARTY_NOTICES.md         # Asset sources and licenses
 ```
 
@@ -72,7 +70,7 @@ colcon build --symlink-install
 
 ## Run
 
-Terminal 1 — start Gazebo, MoveIt, controllers, and RViz:
+Terminal 1 : start Gazebo, MoveIt, controllers, and RViz:
 
 ```bash
 cd /home/aditya-pachauri/Yuktii_AI_Labs_Assignment
@@ -83,7 +81,7 @@ ros2 launch painting_cell cell.launch.py gui:=true rviz:=true
 
 For Bash, use `source scripts/env.sh` instead. Do not source `setup.bash` from Zsh or `setup.zsh` from Bash.
 
-Terminal 2 — validate and execute the sequence:
+Terminal 2 : validate and execute the sequence:
 
 ```bash
 cd /home/aditya-pachauri/Yuktii_AI_Labs_Assignment
@@ -102,19 +100,8 @@ To plan and validate without moving the simulated robot, omit `--execute` and wr
 ros2 run painting_cell painting_demo --output results/validation-only.json
 ```
 
-## Generating report artifacts
-
-```bash
-source scripts/env.zsh
-export MPLCONFIGDIR=/tmp/painting_cell_matplotlib
-python3 scripts/generate_figures.py
-pandoc docs/Technical_Report.md -o Technical_Report.pdf \
-  --pdf-engine=pdflatex --resource-path=.:docs \
-  -V microtypeoptions=expansion=false
-```
-
 ## Engineering choice and limitation
 
-The UR20 was selected because its official ROS 2 Jazzy description and Gazebo/MoveIt support made the integration reproducible within the assessment. In a production automotive paint booth, the design would use a paint-rated, explosion-protected robot and compatible booth equipment—often with a second robot or rail for full-body coverage. The present UR20 setup is an educational simulation, not a production paint-cell recommendation.
+The UR20 was selected because its official ROS 2 Jazzy description and Gazebo/MoveIt support made the integration reproducible. In a production automotive paint booth, the design would use a paint-rated, explosion-protected robot and compatible booth equipment, often with a second robot or rail for full-body coverage. The present UR20 setup is an educational simulation, not a production paint-cell recommendation.
 
 See the [technical report](Technical_Report.pdf) for the full implementation explanation and [third-party notices](THIRD_PARTY_NOTICES.md) for asset licenses.
