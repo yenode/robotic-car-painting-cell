@@ -23,6 +23,9 @@ def copy_tree(relative, destination=None, ignore=None):
                     ignore=shutil.ignore_patterns(*(ignore or [])))
 
 
+video_file = OUT/'Demo_Video/Aditya_Pachauri_Robotic_Painting_Cell_Demo.mp4'
+video_data = video_file.read_bytes() if video_file.exists() else None
+
 if OUT.exists():
     shutil.rmtree(OUT)
 PROJECT.mkdir(parents=True)
@@ -63,19 +66,25 @@ ur_cmake.write_text(
 # Top-level deliverables and the exact folder names requested by the PDF.
 shutil.copy2(ROOT/'Technical_Report.pdf', OUT/'Technical_Report.pdf')
 shutil.copytree(ROOT/'media/screenshots', OUT/'Screenshots')
-(OUT/'Demo_Video').mkdir()
-(OUT/'Demo_Video/RECORDING_REQUIRED.txt').write_text(
-    'Record the 3–7 minute narrated run using docs/Demo_Video_Script.md, '
-    'then place the MP4 in this folder.\n')
-(OUT/'GitHub_Link.txt').write_text('Add the public GitHub repository URL here before submission.\n')
+(OUT/'Demo_Video').mkdir(parents=True, exist_ok=True)
+if video_data:
+    (OUT/'Demo_Video/Aditya_Pachauri_Robotic_Painting_Cell_Demo.mp4').write_bytes(video_data)
+else:
+    (OUT/'Demo_Video/RECORDING_REQUIRED.txt').write_text(
+        'Record the 3–7 minute narrated run using docs/Demo_Video_Script.md, '
+        'then place the MP4 in this folder.\n')
+(OUT/'GitHub_Link.txt').write_text('https://github.com/yenode/robotic-car-painting-cell\n')
 (OUT/'Submission_Email.txt').write_text(
     'To: connect@yuktiiai.in\n'
     'Subject: Assessment submission on robotics simulation\n\n'
     'Full Name: Aditya Pachauri\n'
-    'College: [ADD]\nEmail: [ADD]\n'
+    'College: Indian Institute of Information Technology, Allahabad\n'
+    'Email: adi.pachauri.404@gmail.com\n'
+    'College Email: iib2024001@iiita.ac.in\n'
     'Simulation Software: ROS 2 Jazzy, Gazebo Harmonic, MoveIt 2, RViz 2\n'
     'Robot Selected: Universal Robots UR20\n'
-    'GitHub Link: [ADD]\nGoogle Drive Link: [ADD]\n')
+    'GitHub Link: https://github.com/yenode/robotic-car-painting-cell\n'
+    'Google Drive Link: [PASTE_YOUR_GOOGLE_DRIVE_FOLDER_LINK_HERE]\n')
 
 archive = OUT/'Simulation_Files/Robotic_Car_Painting_Cell.zip'
 with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as bundle:
