@@ -1,0 +1,19 @@
+{
+  "dimensions_m": [
+    4.8,
+    1.9,
+    1.6
+  ],
+  "min_m": [
+    -2.4,
+    -0.95,
+    0.0
+  ],
+  "max_m": [
+    2.4,
+    0.95,
+    1.6
+  ],
+  "source": "OpenRobotics Hatchback v3",
+  "method": "90 degree Z rotation, axis scaling, centered XY and grounded Z"
+}

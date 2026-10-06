@@ -1,0 +1,59 @@
+car_xyz: [0.0, -1.5, 0.0]
+robot_base: [0.4, -2.9, 0.9]
+standoff: 0.25
+stroke_speed: 0.08
+layout:
+  overall_floor: [12.0, 8.0, 0.1]
+  central_bay: [8.0, 5.0]
+  central_bay_center: [0.0, -1.5]
+  boxes:
+    # Coloured floor zones reproduce the 12 x 8 m reference plan: an 8 x 5 m
+    # central bay, two 2 x 5 m side bays, and a 12 x 3 m service row.
+    - {id: central_bay_floor, size: [8.0, 5.0, 0.02], xyz: [0.0, -1.5, 0.01], color: [0.46, 0.50, 0.56, 1.0], collision: false}
+    - {id: west_bay_floor, size: [2.0, 5.0, 0.02], xyz: [-5.0, -1.5, 0.01], color: [0.37, 0.42, 0.48, 1.0], collision: false}
+    - {id: east_bay_floor, size: [2.0, 5.0, 0.02], xyz: [5.0, -1.5, 0.01], color: [0.37, 0.42, 0.48, 1.0], collision: false}
+    - {id: service_floor, size: [12.0, 3.0, 0.02], xyz: [0.0, 2.5, 0.01], color: [0.30, 0.34, 0.40, 1.0], collision: false}
+
+    # Outer wall is split at the left and right vehicle gates shown by arrows
+    # in the assignment drawing. All wall boxes are MoveIt collision objects.
+    - {id: wall_outer_north, size: [12.0, 0.06, 1.8], xyz: [0.0, 3.97, 0.9], color: [0.95, 0.72, 0.05, 0.45], collision: true}
+    - {id: wall_outer_south, size: [12.0, 0.06, 1.8], xyz: [0.0, -3.97, 0.9], color: [0.95, 0.72, 0.05, 0.45], collision: true}
+    - {id: wall_outer_west_south, size: [0.06, 1.4, 1.8], xyz: [-5.97, -3.3, 0.9], color: [0.95, 0.72, 0.05, 0.45], collision: true}
+    - {id: wall_outer_west_north, size: [0.06, 4.4, 1.8], xyz: [-5.97, 1.8, 0.9], color: [0.95, 0.72, 0.05, 0.45], collision: true}
+    - {id: wall_outer_east_south, size: [0.06, 1.4, 1.8], xyz: [5.97, -3.3, 0.9], color: [0.95, 0.72, 0.05, 0.45], collision: true}
+    - {id: wall_outer_east_north, size: [0.06, 4.4, 1.8], xyz: [5.97, 1.8, 0.9], color: [0.95, 0.72, 0.05, 0.45], collision: true}
+
+    # Internal partitions form the two 2 x 5 m side bays and three top rooms.
+    - {id: wall_west_bay_south, size: [0.06, 1.4, 1.8], xyz: [-3.97, -3.3, 0.9], color: [0.95, 0.72, 0.05, 0.45], collision: true}
+    - {id: wall_west_bay_north, size: [0.06, 1.4, 1.8], xyz: [-3.97, 0.3, 0.9], color: [0.95, 0.72, 0.05, 0.45], collision: true}
+    - {id: wall_east_bay_south, size: [0.06, 1.4, 1.8], xyz: [3.97, -3.3, 0.9], color: [0.95, 0.72, 0.05, 0.45], collision: true}
+    - {id: wall_east_bay_north, size: [0.06, 1.4, 1.8], xyz: [3.97, 0.3, 0.9], color: [0.95, 0.72, 0.05, 0.45], collision: true}
+    - {id: wall_service_west, size: [3.2, 0.06, 1.8], xyz: [-4.4, 1.03, 0.9], color: [0.95, 0.72, 0.05, 0.45], collision: true}
+    - {id: wall_service_middle, size: [1.8, 0.06, 1.8], xyz: [-0.9, 1.03, 0.9], color: [0.95, 0.72, 0.05, 0.45], collision: true}
+    - {id: wall_service_east, size: [5.0, 0.06, 1.8], xyz: [3.5, 1.03, 0.9], color: [0.95, 0.72, 0.05, 0.45], collision: true}
+    - {id: wall_service_partition_west, size: [0.06, 3.0, 1.8], xyz: [-1.5, 2.5, 0.9], color: [0.95, 0.72, 0.05, 0.45], collision: true}
+    - {id: wall_service_partition_east, size: [0.06, 3.0, 1.8], xyz: [1.5, 2.5, 0.9], color: [0.95, 0.72, 0.05, 0.45], collision: true}
+
+    # Typical paint-cell services occupy the upper rooms.
+    - {id: control_cabinet, size: [0.8, 0.5, 1.6], xyz: [-3.5, 2.8, 0.8], color: [0.10, 0.35, 0.70, 1.0], collision: true}
+    - {id: paint_supply, size: [1.0, 0.6, 1.4], xyz: [0.0, 2.8, 0.7], color: [0.85, 0.30, 0.08, 1.0], collision: true}
+    - {id: extraction_unit, size: [1.2, 0.55, 1.7], xyz: [3.5, 2.8, 0.85], color: [0.30, 0.36, 0.42, 1.0], collision: true}
+
+    # White lines make the left-to-right vehicle route and gates obvious.
+    - {id: west_lane_left, size: [2.0, 0.06, 0.015], xyz: [-5.0, -2.6, 0.015], color: [0.95, 0.95, 0.95, 1.0], collision: false}
+    - {id: west_lane_right, size: [2.0, 0.06, 0.015], xyz: [-5.0, -0.4, 0.015], color: [0.95, 0.95, 0.95, 1.0], collision: false}
+    - {id: east_lane_left, size: [2.0, 0.06, 0.015], xyz: [5.0, -2.6, 0.015], color: [0.95, 0.95, 0.95, 1.0], collision: false}
+    - {id: east_lane_right, size: [2.0, 0.06, 0.015], xyz: [5.0, -0.4, 0.015], color: [0.95, 0.95, 0.95, 1.0], collision: false}
+patches:
+  hood:
+    ray_axis: z
+    rows: [-0.60, -0.50, -0.40]
+    span: [1.40, 1.60]
+  roof:
+    ray_axis: z
+    rows: [-0.40, -0.35, -0.30]
+    span: [-0.40, -0.20]
+  side:
+    ray_axis: y
+    rows: [0.75, 0.85, 0.95]
+    span: [0.90, 1.15]

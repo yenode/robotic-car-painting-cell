@@ -1,0 +1,355 @@
+{
+  "status": "executed",
+  "robot": "UR20",
+  "car_dimensions_m": [
+    4.8,
+    1.9,
+    1.6
+  ],
+  "car_xyz_m": [
+    0.0,
+    -1.5,
+    0.0
+  ],
+  "base_xyz_m": [
+    0.4,
+    -2.9,
+    0.9
+  ],
+  "standoff_m": 0.25,
+  "layout_floor_m": [
+    12.0,
+    8.0,
+    0.1
+  ],
+  "layout_bay_m": [
+    8.0,
+    5.0
+  ],
+  "layout_collision_objects": [
+    "car",
+    "floor",
+    "pedestal",
+    "wall_outer_north",
+    "wall_outer_south",
+    "wall_outer_west_south",
+    "wall_outer_west_north",
+    "wall_outer_east_south",
+    "wall_outer_east_north",
+    "wall_west_bay_south",
+    "wall_west_bay_north",
+    "wall_east_bay_south",
+    "wall_east_bay_north",
+    "wall_service_west",
+    "wall_service_middle",
+    "wall_service_east",
+    "wall_service_partition_west",
+    "wall_service_partition_east",
+    "control_cabinet",
+    "paint_supply",
+    "extraction_unit"
+  ],
+  "collision_sample_max_joint_step_rad": 0.04,
+  "strokes": [
+    {
+      "name": "hood_1",
+      "cartesian_fraction": 1.0,
+      "rejected_ik_branches": 0,
+      "transition_collision_samples": 317,
+      "painting_collision_samples": 36,
+      "maximum_surface_normal_deviation_deg": 0.0,
+      "target_standoff_min_m": 0.2499999999999999,
+      "target_standoff_max_m": 0.2499999999999999,
+      "nozzle_start_xyz_m": [
+        1.4526379386430417,
+        -2.1101559597561543,
+        1.3043552472089166
+      ],
+      "nozzle_end_xyz_m": [
+        1.6526379386430419,
+        -2.1101559597561543,
+        1.2612420080813422
+      ]
+    },
+    {
+      "name": "hood_2",
+      "cartesian_fraction": 1.0,
+      "rejected_ik_branches": 0,
+      "transition_collision_samples": 24,
+      "painting_collision_samples": 39,
+      "maximum_surface_normal_deviation_deg": 2.826178317942941,
+      "target_standoff_min_m": 0.25000000000000006,
+      "target_standoff_max_m": 0.25000000000000006,
+      "nozzle_start_xyz_m": [
+        1.6552975328345017,
+        -2.0123591676075945,
+        1.2647107885033675
+      ],
+      "nozzle_end_xyz_m": [
+        1.4552975328345015,
+        -2.0123591676075945,
+        1.309492131808969
+      ]
+    },
+    {
+      "name": "hood_3",
+      "cartesian_fraction": 1.0,
+      "rejected_ik_branches": 0,
+      "transition_collision_samples": 23,
+      "painting_collision_samples": 47,
+      "maximum_surface_normal_deviation_deg": 2.0185985764324097,
+      "target_standoff_min_m": 0.25000000000000006,
+      "target_standoff_max_m": 0.25000000000000006,
+      "nozzle_start_xyz_m": [
+        1.4592683108202953,
+        -1.9156610177930795,
+        1.3166958146109238
+      ],
+      "nozzle_end_xyz_m": [
+        1.6592683108202955,
+        -1.9156610177930795,
+        1.2677431930019183
+      ]
+    },
+    {
+      "name": "roof_1",
+      "cartesian_fraction": 1.0,
+      "rejected_ik_branches": 1,
+      "transition_collision_samples": 123,
+      "painting_collision_samples": 28,
+      "maximum_surface_normal_deviation_deg": 0.0,
+      "target_standoff_min_m": 0.2500000000000001,
+      "target_standoff_max_m": 0.2500000000000001,
+      "nozzle_start_xyz_m": [
+        -0.37629048041662067,
+        -1.9157244026218838,
+        1.8209622096423213
+      ],
+      "nozzle_end_xyz_m": [
+        -0.17629048041662065,
+        -1.9157244026218838,
+        1.8018705692169101
+      ]
+    },
+    {
+      "name": "roof_2",
+      "cartesian_fraction": 1.0,
+      "rejected_ik_branches": 0,
+      "transition_collision_samples": 16,
+      "painting_collision_samples": 30,
+      "maximum_surface_normal_deviation_deg": 0.0,
+      "target_standoff_min_m": 0.2500000000000001,
+      "target_standoff_max_m": 0.2500000000000001,
+      "nozzle_start_xyz_m": [
+        -0.17629048041662065,
+        -1.865724402621884,
+        1.8050360133722174
+      ],
+      "nozzle_end_xyz_m": [
+        -0.37629048041662067,
+        -1.865724402621884,
+        1.824127653797628
+      ]
+    },
+    {
+      "name": "roof_3",
+      "cartesian_fraction": 1.0,
+      "rejected_ik_branches": 0,
+      "transition_collision_samples": 20,
+      "painting_collision_samples": 32,
+      "maximum_surface_normal_deviation_deg": 0.0,
+      "target_standoff_min_m": 0.2500000000000001,
+      "target_standoff_max_m": 0.2500000000000001,
+      "nozzle_start_xyz_m": [
+        -0.37629048041662067,
+        -1.815724402621884,
+        1.8272930979529354
+      ],
+      "nozzle_end_xyz_m": [
+        -0.17629048041662065,
+        -1.815724402621884,
+        1.8082014575275247
+      ]
+    },
+    {
+      "name": "side_1",
+      "cartesian_fraction": 1.0,
+      "rejected_ik_branches": 0,
+      "transition_collision_samples": 245,
+      "painting_collision_samples": 48,
+      "maximum_surface_normal_deviation_deg": 8.453664930512758,
+      "target_standoff_min_m": 0.2500000000000001,
+      "target_standoff_max_m": 0.2500000000000001,
+      "nozzle_start_xyz_m": [
+        0.8984597639443074,
+        -2.5787302321093413,
+        0.7837018646541799
+      ],
+      "nozzle_end_xyz_m": [
+        1.1484597639443073,
+        -2.580330982304454,
+        0.7837018646541799
+      ]
+    },
+    {
+      "name": "side_2",
+      "cartesian_fraction": 1.0,
+      "rejected_ik_branches": 0,
+      "transition_collision_samples": 45,
+      "painting_collision_samples": 42,
+      "maximum_surface_normal_deviation_deg": 0.0,
+      "target_standoff_min_m": 0.25000000000000006,
+      "target_standoff_max_m": 0.25000000000000006,
+      "nozzle_start_xyz_m": [
+        1.1526765042686162,
+        -2.543792599421447,
+        0.9195174909380014
+      ],
+      "nozzle_end_xyz_m": [
+        0.9026765042686162,
+        -2.5465791699981843,
+        0.9195174909380014
+      ]
+    },
+    {
+      "name": "side_3",
+      "cartesian_fraction": 1.0,
+      "rejected_ik_branches": 0,
+      "transition_collision_samples": 45,
+      "painting_collision_samples": 37,
+      "maximum_surface_normal_deviation_deg": 3.1943394995857757,
+      "target_standoff_min_m": 0.24999999999999986,
+      "target_standoff_max_m": 0.24999999999999986,
+      "nozzle_start_xyz_m": [
+        0.903741960300944,
+        -2.498681446297304,
+        1.0588258829751138
+      ],
+      "nozzle_end_xyz_m": [
+        1.1537419603009438,
+        -2.494516070726962,
+        1.0588258829751138
+      ]
+    }
+  ],
+  "executed_segments": [
+    {
+      "name": "hood_1_approach",
+      "spray_on": false,
+      "duration_s": 31.57356863,
+      "max_endpoint_joint_error_rad": 0.0010829083978021181
+    },
+    {
+      "name": "hood_1",
+      "spray_on": true,
+      "duration_s": 3.468863278,
+      "max_endpoint_joint_error_rad": 0.0010314901992727332
+    },
+    {
+      "name": "hood_2_approach",
+      "spray_on": false,
+      "duration_s": 2.221693732,
+      "max_endpoint_joint_error_rad": 0.0010611129477030579
+    },
+    {
+      "name": "hood_2",
+      "spray_on": true,
+      "duration_s": 3.793800956,
+      "max_endpoint_joint_error_rad": 0.0013371810834554854
+    },
+    {
+      "name": "hood_3_approach",
+      "spray_on": false,
+      "duration_s": 2.104870566,
+      "max_endpoint_joint_error_rad": 0.0008907752389631929
+    },
+    {
+      "name": "hood_3",
+      "spray_on": true,
+      "duration_s": 4.5848010200000004,
+      "max_endpoint_joint_error_rad": 0.0012170266530486806
+    },
+    {
+      "name": "roof_1_approach",
+      "spray_on": false,
+      "duration_s": 12.138397343,
+      "max_endpoint_joint_error_rad": 0.0012664313459357368
+    },
+    {
+      "name": "roof_1",
+      "spray_on": true,
+      "duration_s": 2.6850279390000003,
+      "max_endpoint_joint_error_rad": 0.001226197219651226
+    },
+    {
+      "name": "roof_2_approach",
+      "spray_on": false,
+      "duration_s": 1.496541991,
+      "max_endpoint_joint_error_rad": 0.0013851635589616773
+    },
+    {
+      "name": "roof_2",
+      "spray_on": true,
+      "duration_s": 2.82357343,
+      "max_endpoint_joint_error_rad": 0.0011760569464388526
+    },
+    {
+      "name": "roof_3_approach",
+      "spray_on": false,
+      "duration_s": 1.8315317860000002,
+      "max_endpoint_joint_error_rad": 0.001181717763164336
+    },
+    {
+      "name": "roof_3",
+      "spray_on": true,
+      "duration_s": 3.035989805,
+      "max_endpoint_joint_error_rad": 0.0012366432374292247
+    },
+    {
+      "name": "side_1_approach",
+      "spray_on": false,
+      "duration_s": 24.381427752,
+      "max_endpoint_joint_error_rad": 0.0011824943034688395
+    },
+    {
+      "name": "side_1",
+      "spray_on": true,
+      "duration_s": 4.642160942,
+      "max_endpoint_joint_error_rad": 0.0013148510914073874
+    },
+    {
+      "name": "side_2_approach",
+      "spray_on": false,
+      "duration_s": 4.390188013,
+      "max_endpoint_joint_error_rad": 0.001263894364679885
+    },
+    {
+      "name": "side_2",
+      "spray_on": true,
+      "duration_s": 4.088362669,
+      "max_endpoint_joint_error_rad": 0.0012723821269822189
+    },
+    {
+      "name": "side_3_approach",
+      "spray_on": false,
+      "duration_s": 4.333001893,
+      "max_endpoint_joint_error_rad": 0.0011987137784643664
+    },
+    {
+      "name": "side_3",
+      "spray_on": true,
+      "duration_s": 3.590630708,
+      "max_endpoint_joint_error_rad": 0.0013025531427608428
+    }
+  ],
+  "negative_collision_test": {
+    "passed": true,
+    "contacts": [
+      [
+        "car",
+        "spray_nozzle"
+      ]
+    ],
+    "executed": false
+  }
+}

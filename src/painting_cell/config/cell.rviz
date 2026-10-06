@@ -1,0 +1,44 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ""
+  Global Options:
+    Fixed Frame: world
+    Background Color: 35; 40; 50
+    Frame Rate: 30
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Cell Size: 1
+      Plane Cell Count: 10
+    - Class: rviz_default_plugins/RobotModel
+      Name: UR20
+      Enabled: true
+      Description Source: Topic
+      Description Topic:
+        Value: /robot_description
+        Durability Policy: Transient Local
+        Reliability Policy: Reliable
+        Depth: 1
+      Visual Enabled: true
+      Collision Enabled: false
+    - Class: rviz_default_plugins/MarkerArray
+      Name: Car and painting paths
+      Enabled: true
+      Topic:
+        Value: /painting/markers
+        Durability Policy: Transient Local
+        Reliability Policy: Reliable
+        Depth: 10
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 7.5
+      Focal Point: {X: 0.0, Y: -0.4, Z: 0.9}
+      Pitch: 0.5
+      Yaw: 5.2
+Window Geometry:
+  Width: 1280
+  Height: 800
